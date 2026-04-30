@@ -15,6 +15,6 @@ spec:
         pathType: Prefix
         backend:
           service:
-            name: monitoring-kube-prometheus-prometheus
+            name: monitoring-kube-prometheus-prometheus-operated
             port:
-              name: web
+              name: 9090
