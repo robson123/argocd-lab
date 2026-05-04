@@ -9,7 +9,7 @@ spec:
   source:
     repoURL: https://github.com/robson123/argocd-lab.git
     targetRevision: HEAD
-    path: apps
+    path: apps/monitoring
     directory:
       recurse: true
 
