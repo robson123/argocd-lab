@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: grafana-ingress
+  name: monitoring
   namespace: argocd
 spec:
   project: default
@@ -9,7 +9,7 @@ spec:
   source:
     repoURL: https://github.com/robson123/argocd-lab.git
     targetRevision: HEAD
-    path: apps/monitoring  
+    path: apps/monitoring
 
   destination:
     server: https://kubernetes.default.svc
@@ -19,3 +19,5 @@ spec:
     automated:
       prune: true
       selfHeal: true
+    syncOptions:
+      - CreateNamespace=true
